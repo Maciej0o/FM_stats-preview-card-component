@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+
+    // font-family: 'Lexend Deca', sans-serif;
+}
+
+
+.card {
+    margin: 8.8rem 2.4rem;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 1110px;
+    max-height: 446px;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-direction: column;
+    
+    &__img-box {
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    &__img-shadow {
+        position: absolute;
+        background-color: hsl(277, 64%, 61%);
+        opacity: .45;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &-wrapper--up {
+            padding: 4rem 3.1rem;
+        }
+        &-title {
+            color: hsl(0, 0%, 100%);
+            padding-bottom: 1.6rem;
+            font-size: 2.8rem;
+
+            span {
+                color: hsl(277, 64%, 61%);
+            }
+        }
+
+        &-text {
+            color: hsla(0, 0%, 100%, 0.75);
+            line-height: 2.5rem;
+        }
+
+        &-wrapper-down {
+            padding: 0 3.1rem .8rem;
+        }
+
+        &-info{
+        
+            &-box {
+                padding-bottom: 2rem;
+            }
+
+            &-number {
+                color: hsl(0, 0%, 100%);
+                font-size: 2.4rem;
+                line-height: 29px;
+                padding-bottom: .2rem;
+            }
+
+            &-description {
+                color: hsla(0, 0%, 100%, 0.6);
+                font-size: 1.2rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+@media(min-width: 767px) {
+    .card {
+        flex-direction: row-reverse;
+        justify-self: center;
+        margin: 8.8rem auto;
+
+        &__img-box {
+            width: 50%;
+        }
+
+        &__img {
+            height: 100%;
+        }
+
+        &__content {
+            width: 50%;
+            text-align: left;
+
+            &-wrapper--up {
+                padding: 7.2rem;
+
+            }
+
+            &-wrapper--down {
+                width: 100%;
+                padding: 0 7.2rem 5.8rem;
+                display: flex;
+                flex-direction: row;
+            }
+
+            &-title {
+                font-size: 3.6rem;
+                padding-bottom: 2.5rem;
+            }
+
+            &-info-box {
+                padding-right: 6rem;
+                padding-bottom: 0;
+            }
+
+        }
+    }
+}

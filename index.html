@@ -7,7 +7,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,28 +19,38 @@
 </head>
 <body>
   <div class="card">
-    <div class="card__img"></div>
+    <div class="card__img-box">
+      <img  class="card__img" src="/images/image-header-desktop.jpg" alt="">      
+      <div class="card__img-shadow"></div>
+    </div>
+
     <div class="card__content">
-      <h1 class="card__content-title">Get insights that help your business grow.</h1>
-      <p class="card__content-text">
-        Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-        experience, and overall efficiency.
-      </p>
-
-      <div class="card__content-info-box">
-        <h3 class="card__content-info-number">10k+</h3>
-        <p class="card__content-info-description">companies</p>
+      <div class="card__content-wrapper--up">
+        <h1 class="card__content-title">Get <span>insights</span> that help your business grow.</h1>
+        <p class="card__content-text">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+          experience, and overall efficiency.
+        </p>
       </div>
+      
+      <div class="card__content-wrapper--down">
+        <div class="card__content-info-box">
+          <h3 class="card__content-info-number">10k+</h3>
+          <p class="card__content-info-description">companies</p>
+        </div>
+  
+        <div class="card__content-info-box">
+          <h3 class="card__content-info-number">314</h3>
+          <p class="card__content-info-description">templates</p>
+        </div>
+  
+        <div class="card__content-info-box">
+          <h3 class="card__content-info-number">12m+</h3>
+          <p class="card__content-info-description">queries</p>
+        </div>
 
-      <div class="card__content-info-box">
-        <h3 class="card__content-info-number">314</h3>
-        <p class="card__content-info-description">templates</p>
       </div>
-
-      <div class="card__content-info-box">
-        <h3 class="card__content-info-number">12m+</h3>
-        <p class="card__content-info-description">queries</p>
-      </div>
+      
 
     </div>
   </div>
